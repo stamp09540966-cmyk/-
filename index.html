@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>กองบินตำรว By 1pakung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+
+/* ✈️ ลอยนุ่มขึ้น */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ✨ glow */
+.glow {
+  box-shadow: 0 0 20px rgba(59,130,246,0.4),
+              0 0 40px rgba(59,130,246,0.2);
+}
+
+/* 🌈 gradient text */
+.gradient-text {
+  background: linear-gradient(to right, #60a5fa, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+</style>
+
+<body class="bg-[#020617] text-white font-sans">
+
+  <!-- 🔷 Navbar -->
+  <nav class="flex justify-between items-center px-10 py-4 bg-[#020617]/70 backdrop-blur-xl border-b border-blue-900/50">
+
+    <div class="flex items-center gap-4">
+      <img src="i_believe_i_can_fly.png"
+        class="w-16 h-16 rounded-full object-cover border-2 border-blue-400 glow transition duration-300 hover:scale-110 hover:rotate-6">
+      <span class="font-bold text-xl tracking-wide gradient-text">กองบินตำรวจ</span>
+    </div>
+
+    <div class="flex gap-6 text-sm text-gray-300">
+      <a href="#" class="text-blue-400 hover:text-white transition">หน้าหลัก</a>
+      <a href="PAD_2.html" class="hover:text-blue-400 transition">เกี่ยวกับเรา</a>
+      <a href="#" class="hover:text-blue-400 transition">ภารกิจ</a>
+      <a href="#" class="hover:text-blue-400 transition">การสมัคร</a>
+      <a href="#" class="hover:text-blue-400 transition">ข่าวสาร</a>
+      <a href="#" class="hover:text-blue-400 transition">ติดต่อ</a>
+    </div>
+  </nav>
+
+  <!-- 🔷 Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#1e3a8a]">
+
+    <!-- GRID BG -->
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(to right, #fff 1px, transparent 1px);
+             background-size: 40px 40px;">
+    </div>
+
+    <!-- Glow light -->
+    <div class="absolute top-20 left-1/2 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full -translate-x-1/2"></div>
+
+    <div class="relative z-10 px-10 py-24 flex justify-between items-center">
+
+      <!-- TEXT -->
+      <div class="max-w-xl">
+        <div class="inline-block bg-blue-500/20 text-blue-300 px-4 py-1 rounded-full text-xs mb-4 backdrop-blur">
+          ROYAL THAI POLICE
+        </div>
+
+        <h1 class="text-5xl font-extrabold leading-tight">
+          กองบินตำรวจ<br>
+          <span class="gradient-text">บ้านหลังคาท้องฟ้า</span>
+        </h1>
+
+        <p class="text-gray-400 mt-5 leading-relaxed">
+          ปฏิบัติภารกิจทางอากาศเพื่อความสงบสุขและความปลอดภัยของประเทศ
+          สนับสนุนภารกิจตำรวจด้วยเทคโนโลยีการบินที่ทันสมัย
+        </p>
+
+        <div class="flex gap-4 mt-8">
+          <button class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg glow transition hover:scale-105">
+            เรียนรู้เพิ่มเติม →
+          </button>
+
+          <button class="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500/20 transition hover:scale-105">
+            ติดต่อเรา
+          </button>
+        </div>
+      </div>
+
+      <!-- AIRPLANE -->
+      <div class="hidden md:block relative">
+        <img src="i_believe_i_can_fly.png"
+          class="w-48 opacity-90 drop-shadow-[0_0_30px_rgba(59,130,246,0.8)] float">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🔷 Stats -->
+  <section class="px-10 py-12 bg-[#020617]">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- CARD -->
+      <div class="bg-[#0f172a]/80 backdrop-blur p-6 rounded-xl text-center border border-blue-900/50 hover:scale-105 transition">
+        <h2 class="text-3xl font-bold gradient-text">4+</h2>
+        <p class="text-gray-400 text-sm mt-2">เครื่องบิน</p>
+      </div>
+
+      <div class="bg-[#0f172a]/80 backdrop-blur p-6 rounded-xl text-center border border-blue-900/50 hover:scale-105 transition">
+        <h2 class="text-3xl font-bold gradient-text">20+</h2>
+        <p class="text-gray-400 text-sm mt-2">นักบินและเจ้าหน้าที่</p>
+      </div>
+
+      <div class="bg-[#0f172a]/80 backdrop-blur p-6 rounded-xl text-center border border-blue-900/50 hover:scale-105 transition">
+        <h2 class="text-3xl font-bold gradient-text">10+</h2>
+        <p class="text-gray-400 text-sm mt-2">โรงเรียนกองบิน</p>
+      </div>
+
+      <div class="bg-[#0f172a]/80 backdrop-blur p-6 rounded-xl text-center border border-blue-900/50 hover:scale-105 transition">
+        <h2 class="text-3xl font-bold gradient-text">2</h2>
+        <p class="text-gray-400 text-sm mt-2">ปีแห่งการบริการ</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

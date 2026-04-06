@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เกี่ยวกับเรา - กองบินตำรวจ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+/* grid background */
+.grid-bg {
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* glow */
+.glow {
+  box-shadow: 0 0 25px rgba(59,130,246,0.5);
+}
+
+/* plane move */
+@keyframes fly {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-20px) translateY(-10px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+.fly {
+  animation: fly 6s ease-in-out infinite;
+}
+</style>
+
+<body class="bg-[#0b1a3a] text-white font-sans">
+
+  <!-- 🔷 HERO ABOUT -->
+  <section class="relative h-screen overflow-hidden grid-bg">
+
+    <!-- gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0b1a3a] via-[#0b1a3a]/80 to-transparent"></div>
+
+    <!-- content -->
+    <div class="relative z-10 flex items-center justify-between h-full px-16">
+
+      <!-- LEFT TEXT -->
+      <div class="max-w-xl">
+
+        <div class="bg-blue-500/20 text-blue-300 px-4 py-1 rounded-full text-xs inline-block mb-4">
+          ROYAL THAI POLICE
+        </div>
+
+        <h1 class="text-5xl font-extrabold leading-tight">
+          กองบิน<br>
+          <span class="text-blue-400">พี่ท้องฟ้า</span>
+        </h1>
+
+        <p class="text-blue-200/70 mt-5 leading-relaxed">
+          กองบินตำรวจเป็นหน่วยงานที่ปฏิบัติภารกิจทางอากาศ
+          เพื่อสนับสนุนความมั่นคง ความปลอดภัย และช่วยเหลือประชาชน
+          ด้วยเทคโนโลยีและบุคลากรมืออาชีพ
+        </p>
+
+        <div class="flex gap-4 mt-8">
+          <button class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg glow transition hover:scale-105">
+            อ่านเพิ่มเติม →
+          </button>
+
+          <button class="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500/20 transition">
+            ติดต่อเรา
+          </button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT PLANE ICON -->
+      <div class="hidden md:block relative">
+
+        <!-- glow circle -->
+        <div class="absolute w-[300px] h-[300px] bg-blue-500/20 blur-[100px] rounded-full right-10 top-10"></div>
+
+        <!-- plane icon (SVG) -->
+        <svg class="w-40 text-blue-400 fly" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path d="M2 16l20-5-20-5v4l15 1-15 1v4z"/>
+        </svg>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 🔷 ABOUT DETAIL -->
+  <section class="px-16 py-20 bg-[#0b1a3a]">
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-[#12204a] p-6 rounded-xl border border-blue-800/40 hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-blue-400 mb-3">วิสัยทัศน์</h3>
+        <p class="text-blue-200/70 text-sm">
+          เป็นหน่วยงานด้านการบินที่มีประสิทธิภาพสูง
+          สนับสนุนภารกิจตำรวจและประเทศชาติอย่างเต็มกำลัง
+        </p>
+      </div>
+
+      <div class="bg-[#12204a] p-6 rounded-xl border border-blue-800/40 hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-blue-400 mb-3">ภารกิจ</h3>
+        <p class="text-blue-200/70 text-sm">
+          ปฏิบัติการทางอากาศ สนับสนุนการป้องกันอาชญากรรม
+          และช่วยเหลือผู้ประสบภัยในทุกสถานการณ์
+        </p>
+      </div>
+
+      <div class="bg-[#12204a] p-6 rounded-xl border border-blue-800/40 hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-blue-400 mb-3">ค่านิยม</h3>
+        <p class="text-blue-200/70 text-sm">
+          ซื่อสัตย์ มืออาชีพ พร้อมปฏิบัติหน้าที่
+          เพื่อประชาชนและประเทศชาติ
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
